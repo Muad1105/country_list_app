@@ -1,0 +1,169 @@
+$mobile: 768px;
+$desktop: 1100px;
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  .signin_page_container {
+    display: flex;
+    padding: 100px 0px;
+    justify-content: space-around;
+    border: 3px solid black;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+
+    .registration-completed-popup-container {
+      display: flex;
+      position: absolute;
+      top: 0;
+      z-index: 3;
+      background-color: black;
+    }
+
+    .signin_section {
+      width: 210px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      h1 {
+        text-align: left;
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: -10px;
+      }
+      .add_user {
+        text-align: left;
+        font-size: 14px;
+
+        span {
+          color: rgb(76, 91, 255);
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+      .form_section {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        .login_input_section {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          input {
+            border: 2px solid black;
+            height: 40px;
+            padding-left: 10px;
+
+            &::placeholder {
+              color: black;
+              font-size: 12px;
+            }
+          }
+          .error {
+            color: red;
+            font-size: 11px;
+            margin-top: -10px;
+            position: relative;
+            font-weight: bold;
+
+            .error-message {
+              z-index: 2;
+              display: flex;
+
+              .show-description {
+                margin-left: 10px;
+                border: 1px solid red;
+                border-radius: 50%;
+                height: 15px;
+                width: 15px;
+                font-weight: bold;
+                cursor: pointer;
+                text-align: center;
+                display: inline;
+              }
+
+              &:hover {
+              }
+            }
+            .error-description {
+              position: absolute;
+              background-color: #fff;
+              border: 1px solid red;
+              z-index: 3;
+              display: none;
+            }
+          }
+        }
+
+        .keep_signedin_section {
+          display: flex;
+          gap: 5px;
+          height: 30px;
+
+          input[type="checkbox"] {
+            outline: 2px solid black;
+            height: 20px;
+            width: 20px;
+            border-color: black;
+            // appearance: none;
+          }
+
+          p {
+            font-size: 13px;
+          }
+        }
+
+        button {
+          background-color: black;
+          color: white;
+          height: 40px;
+          width: 100%;
+        }
+      }
+      .or_border {
+        border-top: 1px solid black;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+
+        p {
+          position: absolute;
+          background-color: white;
+          font-size: 13px;
+          margin-top: -11px;
+          width: 120px;
+        }
+      }
+      .social_media_section {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+
+        .social_media_icons {
+          border: 2px solid black;
+          padding: 5px;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    .signin_page_image {
+      @media screen and (max-width: $mobile) {
+        display: none;
+      }
+      @media screen and (min-width: $mobile) {
+        display: flex;
+      }
+    }
+  }
+}
